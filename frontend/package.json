@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "vite build --base=/assets/dashboard/frontend/ && npm run copy-html-entry",
+    "preview": "vite preview",
+    "copy-html-entry": "cp ../dashboard/public/frontend/index.html ../dashboard/www/dashboard.html"
   },
   "dependencies": {
     "vue": "^3.4.29"
